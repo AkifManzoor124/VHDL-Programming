@@ -6,7 +6,7 @@ entity full_adder_8bit is
         a,b: in std_logic_vector(7 downto 0);
         cin: in std_logic;
         sum: out std_logic_vector(7 downto 0)
-        cout: out std_logic;
+        cout: out std_logic
     );
 end full_adder_8bit;
 
@@ -15,7 +15,7 @@ architecture func of full_adder_8bit is
     component full_adder_1bit
         port(
             a,b,cin: in std_logic;
-            sum,cout: out std_logic;
+            sum,cout: out std_logic
         );
     end component;
 
