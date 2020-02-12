@@ -11,7 +11,7 @@ end full_adder;
 architecture func of full_adder is
 begin
 
-    sum = a XOR b XOR cin;
-    cout = (a AND B) OR (cin AND (A XOR B));
+    sum <= a XOR b XOR cin;
+    cout <= (a AND B) OR (cin AND (A XOR B));
 
 end func ; -- arch

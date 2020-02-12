@@ -10,6 +10,6 @@ end half_adder
 
 architecture func of half_adder is
 begin
-    sum = a XOR b;
-    cout = a AND b;
+    sum <= a XOR b;
+    cout <= a AND b;
 end func; -- arch
