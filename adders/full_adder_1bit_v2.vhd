@@ -1,24 +1,24 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity full_adder is
+entity full_adder_1bit is
     port (
         a,b,cin: in std_logic;
         sum,cout: out std_logic
     );
-end full_adder;
+end full_adder_1bit;
 
-architecture arch of ent is
+architecture func of full_adder_1bit is
 
-    signal s1, s2, s3 : std_logic;
+    signal s : std_logic_vector(2 downto 0);
 
 begin
 
-    s1 <= a xor b;
-    s2 <= cin and s1;
-    s3 <= a and b;
+    s(1) <= a xor b;
+    s(2) <= cin and s1;
+    s(3) <= a and b;
 
-    sum <= s1 xor s2;
-    cout <= s2 or s3;
+    sum <= s(1) xor s(2);
+    cout <= s(2) or s(3);
 
-end arch ; -- arch
+end func ; -- arch
