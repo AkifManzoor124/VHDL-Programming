@@ -43,9 +43,9 @@ architecture func of top is
 
     begin
 
-    L0: full_adder_8bit portmap(a,b,"0",add,carry);
-    L1: subtractor portmap(a,b,"0",sub,carry);
-    L2: mux2to1_8bit portmap (sel,add,mult,sum);
+    L0: full_adder_8bit port map(a,b,"0",add,carry);
+    L1: subtractor port map(a,b,"0",sub,carry);
+    L2: mux2to1_8bit port map (sel,add,mult,sum);
     cout <= carry;
 
 end func ; -- func
