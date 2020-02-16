@@ -1,20 +1,20 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity mux4_1 is
+entity mux4to1_1bit is
   port (
-    a: in std_logic_vector(3 downto 0);
-    sin: in std_logic_vector(1 downto 0);
+    i: in std_logic_vector(3 downto 0);
+    sel: in std_logic_vector(1 downto 0);
     sout: in std_logic
   ) ;
-end mux4_1;
+end mux4to1_1bit;
 
-architecture func of mux4_1 is
+architecture func of mux4to1_1bit is
 begin
 
-    sout <= a(0) when (sin = "00") else
-            a(1) when (sin = "01") else
-            a(2) when (sin = "10") else
-            a(3);
+    sout <= i(0) when (sel = "00") else
+            i(1) when (sel = "01") else
+            i(2) when (sel = "10") else
+            i(3) when others;
 
 end func ; -- arch
