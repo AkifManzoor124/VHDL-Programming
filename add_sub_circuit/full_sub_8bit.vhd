@@ -3,7 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity full_sub_8bit is
     port (
-        a,b: in std_logic_vector(7 downto 0);
+        a: in std_logic_vector(7 downto 0);
+        b: in std_logic_vector(7 downto 0);
         cin: in std_logic;
         sum: out std_logic_vector(7 downto 0)
         cout: out std_logic
@@ -14,8 +15,11 @@ architecture func of full_sub_8bit is
 
     component full_sub_1bit
         port(
-            a,b,cin: in std_logic;
-            sum,cout: out std_logic
+            a: in std_logic;
+            b: in std_logic;
+            cin: in std_logic;
+            sum: out std_logic;
+            cout: out std_logic
         );
     end component;
 

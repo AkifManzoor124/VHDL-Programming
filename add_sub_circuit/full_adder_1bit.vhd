@@ -3,8 +3,11 @@ use ieee.std_logic_1164.all;
 
 entity full_adder_1bit is
     port (
-        a,b,cin: in std_logic;
-        sum,cout: out std_logic
+        a: in std_logic;
+        b: in std_logic;
+        cin: in std_logic;
+        sum: out std_logic;
+        cout: out std_logic
     );
 end full_adder_1bit;
 

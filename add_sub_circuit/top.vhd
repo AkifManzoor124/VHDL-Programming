@@ -3,7 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity top is
   port (
-    a, b : in std_logic_vector(7 downto 0);
+    a: in std_logic_vector(7 downto 0);
+    b: in std_logic_vector(7 downto 0);
     sum: in std_logic_vector(7 downto 0);
     sel: in std_logic;
     cout: out std_logic
@@ -14,26 +15,29 @@ architecture func of top is
 
     component full_adder_8bit
     port (
-        a,b: in std_logic_vector(7 downto 0);
+        a: in std_logic_vector(7 downto 0);
+        b: in std_logic_vector(7 downto 0);
         cin: in std_logic;
-        sum: out std_logic_vector(7 downto 0);
+        sum: out std_logic_vector(7 downto 0)
         cout: out std_logic
     );
     end component;
 
     component subtractor
         port(
-            a,b: in std_logic_vector(7 downto 0);
+            a: in std_logic_vector(7 downto 0);
+            b: in std_logic_vector(7 downto 0);
             cin: in std_logic;
-            sum: out std_logic_vector(7 downto 0);
+            sum: out std_logic_vector(7 downto 0)
             cout: out std_logic
         );
     end component;
 
     component mux2to1_8bit
         port(
-            sin: in std_logic;
-            a,b: in std_logic_vector(7 downto 0);
+            sel: in std_logic;
+            a: in std_logic_vector(7 downto 0);
+            b: in std_logic_vector(7 downto 0);
             sout: out std_logic_vector(7 downto 0)
         );
     end component;
